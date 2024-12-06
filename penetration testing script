@@ -1,0 +1,51 @@
+import socket
+from datetime import datetime
+
+# Function to scan a specific port
+def scan_port(target, port):
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(0.5)
+            result = s.connect_ex((target, port))  # 0 means the port is open
+            if result == 0:
+                print(f"[+] Port {port} is OPEN")
+    except Exception as e:
+        print(f"[-] Error scanning port {port}: {e}")
+
+# Function to scan a range of ports
+def port_scanner(target, start_port, end_port):
+    print(f"\n[INFO] Scanning target: {target}")
+    print(f"[INFO] Scanning ports from {start_port} to {end_port}")
+    print("-" * 50)
+    
+    start_time = datetime.now()
+    
+    for port in range(start_port, end_port + 1):
+        scan_port(target, port)
+    
+    end_time = datetime.now()
+    duration = end_time - start_time
+    print("\n[INFO] Scan completed!")
+    print(f"[INFO] Time taken: {duration}")
+
+# Main script
+if __name__ == "__main__":
+    print("Simple Port Scanner")
+    print("-" * 50)
+    
+    # Input target information
+    target = input("Enter target IP or hostname: ").strip()
+    try:
+        # Resolve hostname to IP if necessary
+        target_ip = socket.gethostbyname(target)
+        print(f"[INFO] Resolved IP: {target_ip}")
+    except socket.gaierror:
+        print(f"[-] Unable to resolve hostname: {target}")
+        exit()
+    
+    # Input port range
+    start_port = int(input("Enter start port (e.g., 1): "))
+    end_port = int(input("Enter end port (e.g., 65535): "))
+    
+    # Run the scanner
+    port_scanner(target_ip, start_port, end_port)
