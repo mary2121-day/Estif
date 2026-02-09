@@ -17,7 +17,7 @@ I am currently working on **Medical Imaging Binary Classification** projects usi
 - **Computer Vision:** Building CNNs and applying Transfer Learning.
 - **Explainable AI:** Using Grad-CAM to ensure clinical model transparency.
 - **Statistics:** Evaluating models via ROC-AUC, F1-Score, and Precision-Recall.
-- 
+  
 ### 🛠️ Technical Toolkit
 
 | Category | Skills & Tools |
