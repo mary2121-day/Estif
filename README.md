@@ -41,4 +41,9 @@ I am currently working on **Medical Imaging Binary Classification** projects usi
 - 📧 **Email:** merryestifanos@gmail.com
 - 🎓 **Education:** B.S. in Information Technology (CSU Dominguez Hills)
 - ⚡ **Current Program:** MAKE Advanced Program (Exp. 2025)
+- 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange)
+![CNN](https://img.shields.io/badge/Model-CNN%20%7C%20Transfer%20Learning-green)
+![Medical AI](https://img.shields.io/badge/Domain-Medical%20Imaging-red)
 
